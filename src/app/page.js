@@ -1,9 +1,14 @@
-import Image from "next/image";
+import Banner from "@/components/homepage/Banner";
+import HomeApps from "@/components/homepage/HomeApp";
+
+import Stats from "@/components/homepage/Stats";
+
 
 export default function Home() {
   return (
     <div>
-      <h2 className="bg-red-600 text-5xl">hello next.js</h2>  
+      <Banner></Banner>
+      <HomeApps></HomeApps>
     </div>
       
   );
