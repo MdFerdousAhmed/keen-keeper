@@ -2,10 +2,8 @@ import React from 'react';
 import SnoozeImg from "@/assets/snooze.png"
 import DeleteImg from "@/assets/delete.png"
 import ArchiveImg from "@/assets/archive.png"
-import TextImg from "@/assets/text.png"
-import VideoImg from "@/assets/video.png"
-import CallImg from "@/assets/call.png"
 import Image from 'next/image';
+import ToggleButton from '@/components/apps/ToggleButton';
 
 export const metadata = {
   title: "keen-keeper Timeline Details Page",
@@ -81,20 +79,7 @@ const HomeDetailsPage = async ({ params }) => {
           </div>
           <div className='m-6 border border-gray-400 shadow-lg p-4 rounded-md'>
             <h2 className='font-bold text-[#244D3F]'>Quick Check-In</h2>
-            <div className='grid grid-cols-3 gap-4'>
-              <div className='border border-gray-400 rounded-md text-center grid justify-center items-center p-4'> 
-                <Image src={CallImg} alt=''></Image>
-                <p>Call</p>
-              </div>
-              <div className='border border-gray-400 rounded-md text-center grid justify-center items-center p-4'>
-                <Image src={TextImg} alt=''></Image>
-                <p>Text</p>
-              </div>
-              <div className='border border-gray-400 rounded-md text-center grid justify-center items-center p-4'>
-                <Image src={VideoImg} alt=''></Image>
-                <p>Video</p>
-              </div>
-            </div>
+            <ToggleButton app={app}></ToggleButton>
           </div>
         </div>
 
