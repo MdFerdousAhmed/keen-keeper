@@ -79,7 +79,7 @@ const HomeDetailsPage = async ({ params }) => {
           </div>
           <div className='m-6 border border-gray-400 shadow-lg p-4 rounded-md'>
             <h2 className='font-bold text-[#244D3F]'>Quick Check-In</h2>
-            <ToggleButton app={app}></ToggleButton>
+            <ToggleButton app={app} ></ToggleButton>
           </div>
         </div>
 

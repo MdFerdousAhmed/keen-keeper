@@ -43,25 +43,22 @@ const TimelinePage = () => {
             >
               <div className='flex justify-center items-center gap-4'>
                 <div>
-                  <Image
-                    src={CallImg}
-                    width={120}
-                    height={120}
-                    className="h-[120px] w-auto"
-                    alt=""
-                  />
+                  
+                    <Image src={CallImg} alt='' width={50} height={50}></Image>
+                  
+
                 </div>
                 <div>
                   <h2 className="font-semibold text-2xl"><span className='text-4xl font-semibold text-[#244D3F]'>meetup</span> with {app.name}</h2>
                   <p>Date: {app.next_due_date}</p>
                 </div>
-                
+
               </div>
               <button
                 className="btn bg-secondary text-white"
                 onClick={() => handleTimeline(app)}
               >
-                Uninstall
+                Delete
               </button>
             </div>
           );

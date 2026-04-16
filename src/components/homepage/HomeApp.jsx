@@ -23,11 +23,11 @@ const TrendingApps = async () => {
           <p className='text-gray-700'>Total Friends</p>
         </div>
         <div className='grid justify-center items-center text-center shadow-lg p-8 rounded-b-lg'>
-          <h1 className='font-semibold text-2xl'>{apps.length }</h1>
+          <h1 className='font-semibold text-2xl'>{3 }</h1>
           <p className='text-gray-700'>On Track</p>
         </div>
         <div className='grid justify-center items-center text-center shadow-lg p-8 rounded-b-lg'>
-          <h1 className='font-semibold text-2xl'>{apps.length }</h1>
+          <h1 className='font-semibold text-2xl'>{5}</h1>
           <p className='text-gray-700'>Need Attention</p>
         </div>
         <div className='grid justify-center items-center text-center shadow-lg p-8 rounded-b-lg'>

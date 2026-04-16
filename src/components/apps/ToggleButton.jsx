@@ -15,20 +15,33 @@ const ToggleButton = ({app}) => {
 
   const handelCallNow = () =>{
     console.log("Handel call now")
-    setContact([...contact, app])
+    const newData = {
+      ...app,
+      type: "call",
+    }
+    console.log(newData)
+    setContact([...contact, newData])
     toast.success(`${app.name} is successfully call added!`);
 
   }
   const handelTextNow = () =>{
     console.log("Handel text now")
-    setContact([...contact, app])
+    const newData = {
+      ...app,
+      type: "text",
+    }
+    setContact([...contact, newData])
     toast.success(`${app.name} is successfully text added!`);
 
 
   }
   const handelVideoNow = () =>{
     console.log("Handel video now")
-    setContact([...contact, app])
+    const newData = {
+      ...app,
+      type: "video",
+    }
+    setContact([...contact, newData])
     toast.success(`${app.name} is successfully video added!`);
    
   }
