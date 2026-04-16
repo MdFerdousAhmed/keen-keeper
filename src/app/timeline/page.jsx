@@ -31,11 +31,12 @@ const TimelinePage = () => {
     <div className="container mx-auto my-10">
       <h2 className='text-4xl font-bold'>Timeline</h2>
       {contact.length === 0 ? (
-        <h2 className="font-bold text-4xl text-center my-5">
-          No contact found!
-        </h2>
+        <div className="flex items-center justify-center min-h-screen">
+        <p className="text-slate-500 text-lg">Loading Timeline…</p>
+      </div>
       ) : (
         contact.map((app, ind) => {
+          console.log(app)
           return (
             <div
               key={ind}
@@ -44,22 +45,19 @@ const TimelinePage = () => {
               <div className='flex justify-center items-center gap-4'>
                 <div>
                   
-                    <Image src={CallImg} alt='' width={50} height={50}></Image>
+                   {app.type === "call" && <Image src={CallImg} alt='' width={50} height={50}></Image>}
+                   {app.type === "text" && <Image src={TextImg} alt='' width={50} height={50}></Image>}
+                   {app.type === "video" && <Image src={VideoImg} alt='' width={50} height={50}></Image>}
                   
 
                 </div>
                 <div>
-                  <h2 className="font-semibold text-2xl"><span className='text-4xl font-semibold text-[#244D3F]'>meetup</span> with {app.name}</h2>
+                  <h2 className="font-semibold text-2xl"><span className='text-4xl font-semibold text-[#244D3F]'>{app.type}</span> with {app.name}</h2>
                   <p>Date: {app.next_due_date}</p>
                 </div>
 
               </div>
-              <button
-                className="btn bg-secondary text-white"
-                onClick={() => handleTimeline(app)}
-              >
-                Delete
-              </button>
+              
             </div>
           );
         })

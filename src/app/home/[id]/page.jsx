@@ -1,4 +1,4 @@
-import React from 'react';
+
 import SnoozeImg from "@/assets/snooze.png"
 import DeleteImg from "@/assets/delete.png"
 import ArchiveImg from "@/assets/archive.png"
@@ -11,7 +11,9 @@ export const metadata = {
 };
 
 const appsPromise = async function () {
-  const res = await fetch("http://localhost:3000/data.json");
+  const res = await fetch("https://keen-keeper-lovat-five.vercel.app/data.json",{
+    cache:"no-cache"
+  });
   const data = await res.json();
   return data;
 };
