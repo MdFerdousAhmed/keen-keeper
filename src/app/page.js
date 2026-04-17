@@ -1,11 +1,10 @@
-import Banner from "@/components/homepage/Banner";
-import HomeApps from "@/components/homepage/HomeApp";
+
+import HomePage from "./home/page";
 
 export default function Home() {
   return (
     <div>
-      <Banner></Banner>
-      <HomeApps></HomeApps>
+      <HomePage></HomePage>
     </div>
       
   );
