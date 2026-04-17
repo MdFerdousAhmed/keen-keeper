@@ -39,8 +39,8 @@ const HomeDetailsPage = async ({ params }) => {
             <h1>{app.name}</h1>
             <div> <button className="btn btn-primary">{app.status}</button></div>
 
-            <div className='flex gap-4 bg-green-200 font-semibold rounded-lg p-2'>{app.tags.map(
-              (tag, index) => <div key={index}>
+            <div className='flex gap-4  font-semibold rounded-lg p-2'>{app.tags.map(
+              (tag, index) => <div className= "border-none rounded-full p-2 text-[#244D3F] bg-green-300" key={index}>
                 {tag}
               </div>
             )}</div>
