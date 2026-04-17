@@ -28,7 +28,7 @@ const HomeDetailsPage = async ({ params }) => {
   console.log(app, "apps")
   return (
     <div>
-      <div className='flex'>
+      <div className='grid grid-cols-1 md:grid-cols-2'>
         <div>
           <div className='card-body items-center text-center border border-gray-300 shadow-lg rounded-lg m-6'>
              <Image src={app.picture}
