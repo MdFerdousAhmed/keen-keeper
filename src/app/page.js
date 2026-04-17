@@ -1,11 +1,15 @@
 
-import HomePage from "./home/page";
+import React from 'react';
+import TrendingApps from '@/components/homepage/HomeApp';
+import Banner from '@/components/homepage/Banner';
 
-export default function Home() {
+const HomePage = () => {
   return (
     <div>
-      <HomePage></HomePage>
+      <Banner></Banner>
+      <TrendingApps></TrendingApps>
     </div>
-      
   );
-}
+};
+
+export default HomePage;
